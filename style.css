@@ -1,0 +1,74 @@
+.hero-section {
+  background-image: url("assets/background.avif"); /* background image for navbar + below */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent so you can see the image */
+}
+
+.hero-content {
+  padding: 150px 20px 50px 20px; /* space below navbar */
+  color: white; /* text color */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* optional for readability */
+}
+
+/* Video and canvas in bottom right corner */
+.videos {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 160px;
+  height: 120px;
+  z-index: 1000;
+}
+
+#video, #canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scaleX(-1);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#gestureName {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+
+
+/* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+  }
+
+  body.dark-mode .navbar,
+  body.dark-mode footer {
+    background-color: #111;
+    color: #f0f0f0;
+  }
+
+  body.dark-mode .nav-link {
+    color: #f0f0f0 !important;
+  }
+
+  body.dark-mode a {
+    color: #c49a6c;
+  }
+
+  body.dark-mode .btn, 
+  body.dark-mode button {
+    background-color: #c49a6c;
+    color: white;
+  }

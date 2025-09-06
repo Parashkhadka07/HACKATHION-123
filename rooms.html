@@ -1,0 +1,218 @@
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      
+      background: #fafafa;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+    padding: 20px;
+    margin-bottom: 15px;
+    }
+
+    .room-container {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;   /* ✅ allows wrapping to new rows */
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .room-card {
+      position: relative;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 250px;
+      flex: 0 0 auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .room-card:hover {
+      transform: scale(1.03);
+    }
+
+    .room-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .favorite-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      border-radius: 50%;
+      padding: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: white;
+      color: black;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .room-info {
+      padding: 12px;
+    }
+
+    .room-info h3 {
+      color: black;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .room-info p {
+      color: black;
+      margin: 4px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .rating {
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Popular Homes</h2>
+  <div class="room-container">
+    <!-- Room Card 1 -->
+    <div class="room-card">
+      <img src="assets/room1.png" alt="Room in Seoul">
+      <div class="badge">Guest favorite</div>
+      <div class="favorite-btn">♡</div>
+      <div class="room-info">
+        <h3>Room in Jongno-gu</h3>
+        <p>$193 for 2 nights</p>
+        <p class="rating">⭐ 4.95</p>
+      </div>
+    </div>
+
+    <!-- Room Card 2 -->
+    <div class="room-card">
+      <img src="assets/room2.png" alt="Guesthouse in Seoul">
+      <div class="badge">Guest favorite</div>
+      <div class="favorite-btn">♡</div>
+      <div class="room-info">
+        <h3>Guesthouse in Seoul</h3>
+        <p>$112 for 2 nights</p>
+        <p class="rating">⭐ 4.94</p>
+      </div>
+    </div>
+
+    <!-- Room Card 3 -->
+    <div class="room-card">
+      <img src="assets/room3.png" alt="Apartment in Seoul">
+      <div class="badge">Guest favorite</div>
+      <div class="favorite-btn">♡</div>
+      <div class="room-info">
+        <h3>Apartment in Seoul</h3>
+        <p>$142 for 2 nights</p>
+        <p class="rating">⭐ 4.97</p>
+      </div>
+    </div>
+
+    <!-- Room Card 4 -->
+    <div class="room-card">
+      <img src="assets/room4.png" alt="Room in Berlin">
+      <div class="badge">Guest favorite</div>
+      <div class="favorite-btn">♡</div>
+      <div class="room-info">
+        <h3>Room in Berlin</h3>
+        <p>$145 for 3 nights</p>
+        <p class="rating">⭐ 4.92</p>
+      </div>
+    </div>
+
+    <!-- Room Card 5 -->
+    <div class="room-card">
+      <img src="assets/room5.png" alt="Guesthouse in Berlin">
+      <div class="badge">Guest favorite</div>
+      <div class="favorite-btn">♡</div>
+      <div class="room-info">
+        <h3>Guesthouse in Berlin</h3>
+        <p>$142 for 3 nights</p>
+        <p class="rating">⭐ 4.91</p>
+      </div>
+    </div>
+
+    <!-- Room Card 6 -->
+    <div class="room-card">
+      <img src="assets/room6.png" alt="Apartment in Berlin">
+      <div class="badge">Guest favorite</div>
+      <div class="favorite-btn">♡</div>
+      <div class="room-info">
+        <h3>Apartment in Berlin</h3>
+        <p>$140 for 2 nights</p>
+        <p class="rating">⭐ 4.95</p>
+      </div>
+    </div>
+
+    <!-- Room Card 7 -->
+    <div class="room-card">
+      <img src="assets/room7.png" alt="Apartment in Paris">
+      <div class="badge">Guest favorite</div>
+      <div class="favorite-btn">♡</div>
+      <div class="room-info">
+        <h3>Apartment in Paris</h3>
+        <p>$152 for 2 nights</p>
+        <p class="rating">⭐ 4.87</p>
+      </div>
+    </div>
+
+    <!-- Room Card 8 -->
+    <div class="room-card" >
+      <img src="assets/room8.png" alt="Apartment in Tuscany">
+      <div class="badge">Guest favorite</div>
+      <div class="favorite-btn">♡</div>
+      <div class="room-info">
+        <h3>Apartment in Tuscany</h3>
+        <p>$147 for 2 nights</p>
+        <p class="rating">⭐ 4.95</p>
+      </div>
+    </div>
+
+    <!-- Room Card 9 -->
+    <div class="room-card">
+      <img src="assets/room9.png" alt="Room in Sicily">
+      <div class="badge">Guest favorite</div>
+      <div class="favorite-btn">♡</div>
+      <div class="room-info">
+        <h3>Room in Sicily</h3>
+        <p>$140 for 2 nights</p>
+        <p class="rating">⭐ 4.96</p>
+      </div>
+    </div>
+
+    <!-- Room Card 10 -->
+    <div class="room-card">
+      <img src="assets/room10.png" alt="Apartment in Sicily">
+      <div class="badge">Guest favorite</div>
+      <div class="favorite-btn">♡</div>
+      <div class="room-info">
+        <h3>Apartment in Sicily</h3>
+        <p>$140 for 2 nights</p>
+        <p class="rating">⭐ 4.98</p>
+      </div>
+    </div>
+  </div> 
+
+</body>
+

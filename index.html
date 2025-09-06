@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEORGE VILLA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="loadTab('home.html')">
+    <!--nav bar-->
+   <header class="hero-section">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo.png" alt="logo" style="width:50px; height:50px; border-radius:50%; margin-right:10px;">
+        GEORGE VILLA
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links and right controls -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left Links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" onclick="loadTab('home.html')" style="cursor:pointer;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="loadTab('About.html')" style="cursor:pointer;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="loadTab('rooms.html')" style="cursor:pointer;">Rooms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="loadTab('services.html')" style="cursor:pointer;">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="loadTab('Contact.html')" style="cursor:pointer;">Contact</a>
+          </li>
+        </ul>
+
+        <!-- for search bar -->
+        <form class="d-flex me-2" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+
+        <div class="d-flex">
+          <button class="btn btn-warning me-2" id="darkModeToggle" style="position: static; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; background-color:green; color:white;" onclick="toggleDarkMode()">Dark Mode</button>
+          <button class="btn btn-danger" style="padding:10px 20px; border:none; border-radius:5px; cursor:pointer;" onclick="loadTab('rooms.html')">Book Now</button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero content below navbar -->
+  <div class="hero-content text-center">
+    <h1>Welcome to George Villa</h1>
+    <p>Your Home Away from Home</p>
+  </div>
+</header>
+
+    <main id="content"></main>
+    <!---for video -->
+    <div class="videos">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="canvas"></canvas>
+      <div id="gestureName"></div>
+    </div>
+
+    <div
+      class="container-fluid text-light mt-5"
+      style="background: linear-gradient(135deg, #2c3e50, #1a252f)"
+    >
+      <footer class="py-5">
+        <div class="row text-center text-md-start">
+          <!-- About -->
+          <div class="col-12 col-md-3 mb-4">
+            <h5 style="font-weight: bold">George Villa</h5>
+            <p style="font-size: 14px; line-height: 1.6">
+              Your serene boutique retreat in the heart of nature. Experience
+              comfort, luxury, and personalized hospitality that makes you feel
+              at home.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-6 col-md-3 mb-4">
+            <h6 style="font-weight: bold">Quick Links</h6>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a
+                  onclick="loadTab('home.html')"
+                  class="nav-link p-0 text-light"
+                  style="cursor: pointer"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  onclick="loadTab('About.html')"
+                  class="nav-link p-0 text-light"
+                  style="cursor: pointer"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  onclick="loadTab('contact.html')"
+                  class="nav-link p-0 text-light"
+                  style="cursor: pointer"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  onclick="loadTab('services.html')"
+                  class="nav-link p-0 text-light"
+                  style="cursor: pointer"
+                  >Services</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-6 col-md-3 mb-4">
+            <h6 style="font-weight: bold">Our Services</h6>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a class="nav-link p-0 text-light">Dining</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link p-0 text-light">Rooms & Suites</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link p-0 text-light">Spa & Wellness</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link p-0 text-light">Guided Tours</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-12 col-md-3 mb-4">
+            <h6 style="font-weight: bold">Contact Info</h6>
+            <p style="font-size: 14px; margin: 0">
+             Lakeside, Pokhara, Nepal
+            </p>
+            <p style="font-size: 14px; margin: 0"> +977-9800000000</p>
+            <p style="font-size: 14px; margin: 0">✉ info@georgevilla.com</p>
+            <div
+              class="d-flex justify-content-center justify-content-md-start mt-2"
+            >
+              <a href="#" class="text-light me-3" style="text-decoration: none">
+                <img
+                  src="assets/facebook.svg"
+                  alt="facebook"
+                  style="width: 20px; margin-right: 5px"
+                />
+                Facebook
+              </a>
+              <a href="#" class="text-light" style="text-decoration: none">
+                <img
+                  src="assets/instagram.svg"
+                  alt="instagram"
+                  style="width: 20px; margin-right: 5px"
+                />
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Line -->
+        <div class="d-flex justify-content-center border-top pt-3 mt-3">
+          <p class="mb-0" style="font-size: 14px">
+            © 2025 George Villa Pvt. Ltd. Nepal | All Rights Reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.13.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
